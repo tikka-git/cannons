@@ -16,6 +16,7 @@ public class CannonsApplication {
 
 	@RequestMapping(value = "/cannons" , method = RequestMethod.GET)
 	public String getCanon(){
-		return "the cannon";
+		ApiCaller apiCaller = new ApiCaller();
+		return apiCaller.callingGraph();
 	}
 }
